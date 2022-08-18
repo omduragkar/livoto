@@ -52,13 +52,16 @@ const Heading = ({data}) => {
                 </Box>
             </Stack>
         </Box>
-        <Box>
+        <Box sx={{
+            marginLeft:"0px !important" 
+        }}>
             <Box sx={{
                 ...dFlex,
                 justifyContent:"flex-end",
                 pr:1,
-                gap:1,
-                flexDirection:"row"
+                // gap:{xs:0,md:1},
+                flexDirection:"row",
+                
             }}>
                 <Button variant='text' size='large' sx={{
                     gap:1

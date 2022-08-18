@@ -22,12 +22,11 @@ const Houses = () => {
     return (
         <Container maxWidth={"xl"} sx={{
             marginTop:2,
-            paddingBottom:2,
             flexGrow:1,
             overflowY:{
                 xs:"scroll",
                 md:"hidden"
-            }
+            },
         }}>
             <Stack sx={{
                 flexDirection:{
@@ -45,6 +44,8 @@ const Houses = () => {
                         xs:"visible",
                         md:"scroll"
                     },
+                    marginBottom:{xs:"15%", md:"0px"},
+
                 }}>
                     <Heading data={data}/>
                     <Houseimage data={data}/>    
@@ -54,14 +55,26 @@ const Houses = () => {
                 <Box sx={{
                     flex:1,
                     position:"relative",
+                    marginTop:5,
+                    marginLeft:"0px !important",
+                    marginBottom:"10px !important",
+                    paddingBottom:"10%",
+                    overflowY:{
+                        xs:"visible",
+                        md:"auto"
+                    },
+
                 }}>
                     <Box sx={{
-                        position:"absolute",
+                        position:{
+                            xs:"static",
+                            md:"absolute"
+                        },
                         right:"0",
                         left:0,
                         top:0,
                         bottom:"0",
-                        
+                        marginLeft:{xs:0, md:2}
                     }}>
                         <PayButton/>
                     </Box>
