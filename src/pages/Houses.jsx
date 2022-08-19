@@ -57,7 +57,6 @@ const Houses = () => {
                     position:"relative",
                     marginTop:5,
                     marginLeft:"0px !important",
-                    marginBottom:"10px !important",
                     paddingBottom:"10%",
                     overflowY:{
                         xs:"visible",
@@ -74,7 +73,8 @@ const Houses = () => {
                         left:0,
                         top:0,
                         bottom:"0",
-                        marginLeft:{xs:0, md:2}
+                        marginLeft:{xs:0, md:2},
+                        pb:10,
                     }}>
                         <PayButton/>
                     </Box>

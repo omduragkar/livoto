@@ -14,16 +14,23 @@ const Home = () => {
         flexGrow:1,
         height:100,
         overflowY:"scroll",
+        pb:20,
+        
     }}>
-        <Box>
+        <Box sx={{
+          ...dFlex,
+          minHeight:100,
+          position:"relative",
+          backgroundColor:"transparent"
+        }}>
           <FilterTab/>
         </Box>
           <Box sx={{
             
         }}>
-            <Container maxWidth={"xl"}>
-              <HomeLocationCard/>
-            </Container>
+          <Container maxWidth={"xl"}>
+            <HomeLocationCard/>
+          </Container>
         </Box>
     </Box>
   )
