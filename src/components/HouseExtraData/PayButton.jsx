@@ -12,20 +12,19 @@ const PayButton = ({data}) => {
     };
   return (
     <Stack direction={"column"} sx={{
-        boxShadow:1,
-        border:"1px solid #ddd",
-        flex:1,
-        borderRadius:2,
+    //     border:"2px solid orange",
+        height:"100%",
+        overflowY:"auto",
     }}>
         <Box sx={{
-        borderRadius:2,
-        padding:2,
+            padding:2,
         }}>
-            <Typography component={"h4"} sx={{
+            <Typography component={"h3"} sx={{
                 fontSize:"25px",
                 fontWeight:900,
                 textAlign:"center",
-                pb:1
+                pb:1,
+                color:theme=>theme.palette.secondary.main
             }}>Get in Touch</Typography>
             <Stack direction={"column"}>
                     <FormControl sx={{
@@ -98,8 +97,8 @@ const PayButton = ({data}) => {
                                 ...flexCenter,
                                 gap:2
                             }}>
-                                <Button variant={"contained"} color={"info"}>Schedule</Button>
-                                <Button variant={"contained"} color={"info"}>Call us</Button>
+                                <Button variant={"outlined"} color={"info"}>Schedule</Button>
+                                <Button variant={"outlined"} color={"info"}>Call us</Button>
                             </Box>
                             <IconButton color='success'>
                                 <WhatsappOutlined/>
@@ -108,6 +107,7 @@ const PayButton = ({data}) => {
                     </FormControl>
             </Stack>
         </Box>
+        <Typography component={"h3"} textAlign={"center"}> * Terms and Condition Apply</Typography>
     </Stack>
   )
 }

@@ -2,7 +2,7 @@
 import { useMediaQuery } from '@mui/material'
 import { Box, Container } from '@mui/system'
 import React from 'react'
-import { dFlex, flexBetween, flexBetweenCenter } from '../../theme/commonStyles'
+import { dFlex, flexBetween } from '../../theme/commonStyles'
 import LocationSearch from './LocationSearch'
 import Logo from './Logo'
 import ProfileSettings from './ProfileSettings'

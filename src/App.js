@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import BottomNavigationBar from './components/nav/BottomNavigation';
-import Header from './components/nav/Header';
+import Auth from './pages/Auth';
 import Home from './pages/Home';
 import Houses from './pages/Houses';
 import { dFlex } from './theme/commonStyles';
@@ -23,20 +23,21 @@ function App() {
         height:"100vh"
       }}>
         <BrowserRouter>
-          <Box>
-            <Header/>
-          </Box>
           <Routes>
             <Route path='/'>
               <Route index element={<Home/>}/>
               <Route path='space'>
                 <Route path=":houseId" element={<Houses/>}/>
               </Route>
+              <Route path="auth">
+                <Route path="login" element={<Auth login={true}/>}/>
+                <Route path="signup" element={<Auth login={false}/>}/>
+              </Route>
             </Route>
           </Routes>
           <Box sx={{ 
             ...dFlex,
-            minHeight:50,
+            height:68,
             borderTop:"1px solid #ddd",
             position:"relative",
             display:{

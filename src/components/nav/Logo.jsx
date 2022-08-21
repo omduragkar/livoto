@@ -11,8 +11,8 @@ const Logo = () => {
   return (
     <Box sx={{
       ...flexCenter,
-      px:!breakp9 && 4
-      
+      px:!breakp9 && 4,
+      cursor:"pointer",
     }}
     onClick={()=>{
       console.log("hello")

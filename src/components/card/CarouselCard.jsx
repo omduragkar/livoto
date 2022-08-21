@@ -20,6 +20,7 @@ import {
   fixedIcon,
   carouselImage,
   fixedBottom,
+  flexBetweenCenter,
 } from '../../theme/commonStyles';
 import './CarouselCard.css';
 import { useNavigate } from 'react-router-dom';
@@ -107,15 +108,15 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
         />
       </Box>
 
-      <Box sx={flexBetween} onClick={e=>{
+      <Box sx={flexBetween}>
+        <Box sx={{ mt: 2, cursor:"pointer" }} onClick={e=>{
           history(`/space/${location.id}`)
       }}>
-        <Box sx={{ mt: 2 }}>
           <Typography component="h3"> {location.location}</Typography>
           <Typography component="h4"> {location.days}</Typography>
           <Typography component="h5"> {location.price}</Typography>
         </Box>
-        <Box sx={{ mt: 2 }}>
+        <Box sx={{ mt: 2, ...flexBetweenCenter, flexDirection:"column", height:"100%", gap:2 }}>
           <Box sx={{...dFlex, alignItems:"center", gap:0.5}}>
             {location.isNew ? (
               <React.Fragment>
@@ -129,6 +130,17 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
               </React.Fragment>
             )}
           </Box>
+          <Box>
+              <Button onClick={e=>{
+                history(`/space/${location.id}`)
+              }}
+              variant={"outlined"}
+              color={"secondary"}
+              >
+                View
+              </Button>
+          </Box>
+
         </Box>
       </Box>
     </Box>

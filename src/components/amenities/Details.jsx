@@ -1,8 +1,8 @@
 import { Button, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import React, { useEffect, useState } from 'react'
-import { BsArrowLeft, BsArrowRightCircle } from 'react-icons/bs';
-import { flexBetween, flexBetweenCenter, flexCenter } from '../../theme/commonStyles';
+import React, { useState } from 'react'
+import {  BsArrowRightCircle } from 'react-icons/bs';
+import {  flexBetweenCenter } from '../../theme/commonStyles';
 
 const Details = () => {
     const [readm, setReadm] = useState(true);
@@ -16,13 +16,14 @@ const Details = () => {
     return (
         <Stack direction={"column"}>
             <Box>
-            <Typography variant={"h2"} sx={{
-                fontSize:"20px",
-                fontWeight:"900",
-                py:2
-            }}>
-                Details of Tallinn House
-            </Typography>
+                <Typography variant={"h2"} sx={{
+                    fontWeight:800,
+                    fontSize:"24px",
+                    py:2,
+                    color:theme=>theme.palette.secondary.main
+                }}>
+                Details
+                </Typography>
                 <Typography>
                     {
                         readm ?

@@ -5,34 +5,49 @@ import { dFlex } from '../theme/commonStyles';
 
 import FilterTab from '../components/filters/FilterTab';
 import HomeLocationCard from '../components/card/HomeLocationCard';
+import Header from '../components/nav/Header';
 
 const Home = () => {
   return (
     <Box sx={{
-        ...dFlex,
-        flexDirection:"column",
-        flexGrow:1,
-        height:100,
-        overflowY:"scroll",
-        pb:20,
-        
+      ...dFlex,
+      flexDirection:"column",
+      height:"100%"
     }}>
-        <Box sx={{
+      <Header/>
+      <Box sx={{
           ...dFlex,
-          minHeight:100,
-          position:"relative",
-          backgroundColor:"transparent"
-        }}>
-          <FilterTab/>
-        </Box>
+          flexDirection:"column",
+          flexGrow:1,
+          height:100,
+          overflowY:"scroll",
+          pb:20,
+          
+      }}>
           <Box sx={{
-            
-        }}>
-          <Container maxWidth={"xl"}>
-            <HomeLocationCard/>
-          </Container>
-        </Box>
-    </Box>
+            ...dFlex,
+            minHeight:100,
+            position:"relative",
+            backgroundColor:"transparent"
+          }}>
+            <FilterTab/>
+          </Box>
+            <Box sx={{
+              
+          }}>
+            <Container maxWidth={"xl"} sx={{
+              px:{
+                xs:0,
+                sm:2,
+                md:4
+
+              }
+            }}>
+              <HomeLocationCard/>
+            </Container>
+          </Box>
+      </Box>
+    </Box>  
   )
 }
 

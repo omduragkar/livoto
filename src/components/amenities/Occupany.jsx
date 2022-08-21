@@ -62,20 +62,29 @@ const arr=[
 ]
 const Occupany = () => {
   return (
-    <Stack sx={{
-      ...flexBetweenCenter,
-      flexDirection:{
-        xs:"column",
-        sm:"row"
-      },
-      width:"100%",
-      gap:2
-    }}>
-      {arr.map(cards=>(
-        <OccupanyCard cardData={cards}/>
+    <Box>
+      <Typography variant={"h2"} sx={{
+        fontWeight:800,
+        fontSize:"24px",
+        py:2,
+        px:0.5,
+        color:theme=>theme.palette.secondary.main
+      }}>Occupancy</Typography>
+      <Stack sx={{
+        ...flexBetweenCenter,
+        flexDirection:{
+          xs:"column",
+          sm:"row"
+        },
+        width:"100%",
+        gap:2
+      }}>
+        {arr.map(cards=>(
+          <OccupanyCard cardData={cards}/>
 
-      ))}
-    </Stack>
+        ))}
+      </Stack>
+    </Box>
   )
 }
 

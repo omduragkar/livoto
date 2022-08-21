@@ -21,6 +21,12 @@ const theme = createTheme({
             defaultProps:{
                 variant:"subtitle2",
                 textTransform:'capitalize'
+            },
+            styleOverrides:{
+                h3:{
+                    fontWeight:"bolder",
+                    fontSize:"24px"
+                }
             }
         },
         MuiButton:{

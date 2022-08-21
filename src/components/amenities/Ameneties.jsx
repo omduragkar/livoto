@@ -1,10 +1,11 @@
 import { Button, Typography } from '@mui/material';
-import { Box, Stack } from '@mui/system'
+import {  Stack } from '@mui/system'
 import React from 'react'
 import { CgGym } from "react-icons/cg";
 import { AiOutlineWifi } from "react-icons/ai";
 import { MdOutlineBreakfastDining } from "react-icons/md";
 import { GiChickenOven, GiElectric, GiWashingMachine, GiWaterTower } from "react-icons/gi";
+import { flexBetweenCenter } from '../../theme/commonStyles';
 
 
 const IconAmenities = ({ico})=>{
@@ -13,7 +14,8 @@ const IconAmenities = ({ico})=>{
       border:"1px solid #ddd",
       borderRadius:2,
       gap:1,
-      px:2
+      px:2,
+      mx:"0px !important"
     }}>
       {ico?.icon}
       <Typography>{ico?.type}</Typography>
@@ -26,12 +28,12 @@ const arr=[
     type:"free Wifi",
   },
   {
-    icon:<CgGym size={"24px"}/>,
-    type:"free Gym",
-  },
-  {
     icon:<MdOutlineBreakfastDining size={"24px"}/>,
     type:"free Breakfast",
+  },
+  {
+    icon:<CgGym size={"24px"}/>,
+    type:"free Gym",
   },
   {
     icon:<GiElectric size={"24px"}/>,
@@ -58,15 +60,32 @@ const arr=[
 ]
 const Ameneties = () => {
   return (
-    <Stack sx={{
-      flexWrap:"wrap",
-      gap:2
-    }}>
-      {
-        arr.map(ico=>(
-          <IconAmenities ico={ico}/>
-        ))
-      }
+    <Stack direction={"column"}>
+      <Typography variant={"h2"} sx={{
+        fontWeight:800,
+        fontSize:"24px",
+        py:2,
+        color:theme=>theme.palette.secondary.main
+      }}>Amenities</Typography>
+      <Stack sx={{
+        flexWrap:"wrap",
+        ...flexBetweenCenter,
+        justifyContent:{
+          xs:"flex-start",
+          md:"space-evenly"
+        },
+        gap:{
+          xs:1,
+          md:3
+        }
+      }}>
+        {
+          arr.map(ico=>(
+            <IconAmenities ico={ico}/>
+          ))
+        }
+      </Stack>
+
     </Stack>
   )
 }
