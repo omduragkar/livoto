@@ -1,9 +1,10 @@
-import { WhatsappOutlined } from '@mui/icons-material'
+
 import { Box, Button, FormControl, FormControlLabel, IconButton, InputLabel, MenuItem, Radio, RadioGroup, Select, TextField, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
 import React from 'react'
 import { dFlex, flexBetweenCenter, flexCenter } from '../../theme/commonStyles'
 import ThreeSixtyRoundedIcon from '@mui/icons-material/ThreeSixtyRounded';
+import { BsWhatsapp } from 'react-icons/bs';
 const PayButton = ({data}) => {
     const [age, setAge] = React.useState('');
 
@@ -101,7 +102,7 @@ const PayButton = ({data}) => {
                                 <Button variant={"outlined"} color={"info"}>Call us</Button>
                             </Box>
                             <IconButton color='success'>
-                                <WhatsappOutlined/>
+                                <BsWhatsapp size={"24px"}/>
                             </IconButton>
                         </Box>
                     </FormControl>

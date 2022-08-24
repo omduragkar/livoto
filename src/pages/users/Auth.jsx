@@ -1,9 +1,9 @@
 import { Container } from "@mui/system"
-import Login from "../components/auth/Login"
-import Signup from "../components/auth/Signup"
-import { dFlex } from "../theme/commonStyles"
+import Login from "../../components/auth/Login"
+import Signup from "../../components/auth/Signup"
+import { dFlex } from "../../theme/commonStyles"
 
-const Auth = ({login}) => {
+const Auth = ({admin, login}) => {
   return (
     <Container maxWidth={"xl"} sx={{
       width:"100%",
@@ -26,11 +26,10 @@ const Auth = ({login}) => {
       ...dFlex,
 
     }}>
-
       {login?
-        <Login/>
+        <Login admin={admin}/>
         :
-        <Signup/>
+        <Signup admin={admin}/>
       }
     </Container>
   )

@@ -1,0 +1,6 @@
+export const TICKETS = "TICKETS"
+export const DASHBOARD = "DASHBOARD"
+export const CUSTOMERS = "CUSTOMERS"
+export const PROPERTIES = "PROPERTIES"
+export const MESSAGES = "MESSAGES"
+export const TRANSACTIONS = "TRANSACTIONS"

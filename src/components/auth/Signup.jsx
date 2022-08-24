@@ -2,7 +2,7 @@
 import { Box, Button, Checkbox, CssBaseline, IconButton, Link, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { dFlex, flexCenter } from '../../theme/commonStyles'
-const Signup = () => {
+const Signup = ({admin}) => {
   return (
     
     <Stack sx={{
@@ -24,7 +24,10 @@ const Signup = () => {
         <Stack sx={{
             justifyContent:"center",
             alignItems:"center",
-            border:"2px solid #ddd",
+            border:{
+                xs:"0px",
+                md:"2px solid #ddd"
+            },
             borderRadius:3,
             p:{
             xs:2,
@@ -43,7 +46,7 @@ const Signup = () => {
                 xs:"block",
                 md:"none",
             }
-            }} variant={"h3"} py={2} color={"secondary"} textTransform={"capitalize"}>Signup</Typography>
+            }} variant={"h3"} py={5} pt={15} color={"secondary"} textTransform={"capitalize"}>Signup</Typography>
             <Stack sx={{
             flexDirection:{
                 xs:"column",
@@ -106,7 +109,7 @@ const Signup = () => {
                     </Stack>
                     <Typography color={"secondary"}>
                     Already a user?
-                    <Link href='/auth/login'>Go here</Link>
+                    <Link href='/user/auth/login'>Go here</Link>
                     </Typography>
                     <Button variant='outlined' color={"secondary"} >Let's Go !</Button>
                 </Stack>

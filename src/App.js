@@ -7,9 +7,11 @@ import {
 } from "react-router-dom";
 import './App.css';
 import BottomNavigationBar from './components/nav/BottomNavigation';
-import Auth from './pages/Auth';
-import Home from './pages/Home';
-import Houses from './pages/Houses';
+import { CUSTOMERS, DASHBOARD, MESSAGES, PROPERTIES, TICKETS, TRANSACTIONS } from './constants/navConstantsAdmin';
+import Dashboard from './pages/admin/Dashboard';
+import Auth from './pages/users/Auth';
+import Home from './pages/users/Home';
+import Houses from './pages/users/Houses';
 import { dFlex } from './theme/commonStyles';
 
 function App() {
@@ -26,12 +28,23 @@ function App() {
           <Routes>
             <Route path='/'>
               <Route index element={<Home/>}/>
-              <Route path='space'>
-                <Route path=":houseId" element={<Houses/>}/>
+              <Route path='user'>
+                <Route path='space'>
+                  <Route path=":houseId" element={<Houses/>}/>
+                </Route>
+                <Route path="auth">
+                  <Route path="login" element={<Auth admin={false} login={true}/>}/>
+                  <Route path="signup" element={<Auth admin={false} login={false}/>}/>
+                </Route>
               </Route>
-              <Route path="auth">
-                <Route path="login" element={<Auth login={true}/>}/>
-                <Route path="signup" element={<Auth login={false}/>}/>
+              <Route path="admin">
+                <Route path="login" element={<Auth admin={true} login={true}/>}/>
+                <Route path="dashboard" element={<Dashboard data={DASHBOARD}/>}/>
+                <Route path="tickets" element={<Dashboard data={TICKETS}/>}/>
+                <Route path="properties" element={<Dashboard data={PROPERTIES}/>}/>
+                <Route path="messages" element={<Dashboard data={MESSAGES}/>}/>
+                <Route path="transactions" element={<Dashboard data={TRANSACTIONS}/>}/>
+                <Route path="customers" element={<Dashboard data={CUSTOMERS}/>}/>
               </Route>
             </Route>
           </Routes>

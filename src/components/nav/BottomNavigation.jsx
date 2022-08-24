@@ -31,10 +31,10 @@ function BottomNavigationBar() {
             history("/")
           }}/>
           <BottomNavigationAction label="Wishlists" icon={<FavoriteIcon size={"24px"}/>} onClick={()=>{
-            history("/auth/signup")
+            history("/user/auth/signup")
           }}/>
           <BottomNavigationAction label="Log in" icon={<CgProfile size={"24px"}/>} onClick={()=>{
-            history("/auth/login")
+            history("/user/auth/login")
           }}/>
         </BottomNavigation>
       </Box>

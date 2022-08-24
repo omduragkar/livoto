@@ -3,17 +3,17 @@ import { CssBaseline, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useRef, useState } from 'react'
 import {  useParams } from "react-router-dom";
-import Ameneties from '../components/amenities/Ameneties';
-import Details from '../components/amenities/Details';
-import MapsView from '../components/amenities/MapsView';
-import Nearby from '../components/amenities/Nearby';
-import Occupany from '../components/amenities/Occupany';
-import Heading from '../components/HouseExtraData/Heading';
-import Houseimage from '../components/HouseExtraData/Houseimage';
-import PayButton from '../components/HouseExtraData/PayButton';
-import HomeDetailsNav from '../components/nav/HomeDetailsNav';
-import { locations } from '../data/mockData';
-import { dFlex } from '../theme/commonStyles';
+import Ameneties from '../../components/amenities/Ameneties';
+import Details from '../../components/amenities/Details';
+import MapsView from '../../components/amenities/MapsView';
+import Nearby from '../../components/amenities/Nearby';
+import Occupany from '../../components/amenities/Occupany';
+import Heading from '../../components/HouseExtraData/Heading';
+import Houseimage from '../../components/HouseExtraData/Houseimage';
+import PayButton from '../../components/HouseExtraData/PayButton';
+import HomeDetailsNav from '../../components/nav/HomeDetailsNav';
+import { locations } from '../../data/mockData';
+import { dFlex } from '../../theme/commonStyles';
 
 
 function TabPanel(props) {

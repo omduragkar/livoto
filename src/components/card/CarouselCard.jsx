@@ -110,7 +110,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
       <Box sx={flexBetween}>
         <Box sx={{ mt: 2, cursor:"pointer" }} onClick={e=>{
-          history(`/space/${location.id}`)
+          history(`/user/space/${location.id}`)
       }}>
           <Typography component="h3"> {location.location}</Typography>
           <Typography component="h4"> {location.days}</Typography>
@@ -132,7 +132,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
           </Box>
           <Box>
               <Button onClick={e=>{
-                history(`/space/${location.id}`)
+                history(`/user/space/${location.id}`)
               }}
               variant={"outlined"}
               color={"secondary"}

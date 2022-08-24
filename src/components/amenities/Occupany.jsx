@@ -25,9 +25,10 @@ const OccupanyCard = (
       width:{
         xs:"100%",
         
-      }
+      },
+      marginLeft:"0px !important"
     }}>
-      <Box sx={{...flexCenter, gap:1, flexDirection:{xs:"column", md:"row"}}}>
+      <Box sx={{...flexCenter, gap:1, flexDirection:{xs:"column", md:"row"}, marginLeft:"0px !important"}}>
         {cardData?.icon}
         <Typography>{cardData?.occupancy}</Typography>
       </Box>
